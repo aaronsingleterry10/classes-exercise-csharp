@@ -7,23 +7,51 @@ using System.Diagnostics;
 
 namespace ClassesExercise
 {
-    //public class Stopwatch
-    //{
-    //    private DateTime _startTime;
-    //    private DateTime _endTime;
+    public class Stopwatch
+    {
+        private Nullable<DateTime> _startTime;
+        private DateTime _stopTime;
+        private TimeSpan _duration;
 
-    //    public DateTime StartTime
-    //    {
-    //        get { return _startTime; }
-    //        set
-    //        {
-    //            if (_startTime != null)
-    //            {
+        public void StartTime()
+        {
+            if (_stopTime > DateTime.MinValue)
+            {
+                _startTime = null;
+                _startTime = DateTime.Now;
+            }
+            else if (_startTime == DateTime.MinValue)
+            {
+                _startTime = DateTime.Now;
+            }
+            else
+            {
+                throw new InvalidOperationException("stopwatch started already");
+            }
+            
+        }
 
-    //            }
-    //        }
-    //    }
-    //}
+        public void StopTime()
+        {
+            //if (_stopTime > DateTime.MinValue)
+            //{
+            //    _stopTime = DateTime.Now;
+            //} 
+            //else
+            //{
+                _stopTime = DateTime.Now;
+            //}
+        }
+
+        public TimeSpan Duration
+        {
+            get
+            {
+                _duration = _stopTime.Subtract((DateTime)_startTime);
+                return _duration;
+            }
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -45,23 +73,15 @@ namespace ClassesExercise
                 outside, you should not be able to misuse a class because you shouldn’t be able to see the
                 implementation detail
              */
-            var timeStamp = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
-            //Console.WriteLine("Minute: " + timeStamp.Minutes);
-            //Console.WriteLine("Seconds: " + timeStamp.Seconds);
-            var start = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
-            Console.WriteLine("Minute: " + start.Minute);
-            Console.WriteLine("Seconds: " + start.Second);
-            //var minute = DateTime.Now.Minute.ToString();
-            //Console.WriteLine(minute);
-            //Console.WriteLine(start);
-            var now = DateTime.Now;
-            
-            var rightNow = new DateTime();
-            var min = rightNow.Minute;
-            //Console.WriteLine(min);
-            //Console.WriteLine(now.Minute + ":" + now.Second + ":" + now.Millisecond);
-            //Console.WriteLine(timeStamp.Duration());
-            //Console.WriteLine(timeStamp.Duration());
+            var time = new Stopwatch();
+            time.StartTime();
+            time.StopTime();
+            Console.WriteLine("First time: " + time.Duration);
+            time.StartTime();
+            time.StopTime();
+            Console.WriteLine("Second time: " + time.Duration);
+
+
 
         }
     }
