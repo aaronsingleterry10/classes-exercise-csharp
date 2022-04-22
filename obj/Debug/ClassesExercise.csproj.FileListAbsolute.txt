@@ -1,0 +1,8 @@
+C:\Users\Aaron Singleterry\source\repos\ClassesExercise\bin\Debug\ClassesExercise.exe.config
+C:\Users\Aaron Singleterry\source\repos\ClassesExercise\bin\Debug\ClassesExercise.exe
+C:\Users\Aaron Singleterry\source\repos\ClassesExercise\bin\Debug\ClassesExercise.pdb
+C:\Users\Aaron Singleterry\source\repos\ClassesExercise\obj\Debug\ClassesExercise.csproj.AssemblyReference.cache
+C:\Users\Aaron Singleterry\source\repos\ClassesExercise\obj\Debug\ClassesExercise.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aaron Singleterry\source\repos\ClassesExercise\obj\Debug\ClassesExercise.csproj.CoreCompileInputs.cache
+C:\Users\Aaron Singleterry\source\repos\ClassesExercise\obj\Debug\ClassesExercise.exe
+C:\Users\Aaron Singleterry\source\repos\ClassesExercise\obj\Debug\ClassesExercise.pdb
