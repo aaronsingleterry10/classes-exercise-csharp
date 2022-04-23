@@ -4,18 +4,17 @@ namespace ClassesExercise
 {
     public class Stopwatch
     {
-        private Nullable<DateTime> _startTime;
+        private DateTime _startTime;
         private DateTime _stopTime;
         private TimeSpan _duration;
 
         public void StartTime()
         {
-            if (_stopTime > DateTime.MinValue)
+            if (_startTime == DateTime.MinValue)
             {
-                _startTime = null;
                 _startTime = DateTime.Now;
             }
-            else if (_startTime == DateTime.MinValue)
+            else if (_stopTime > DateTime.MinValue)
             {
                 _startTime = DateTime.Now;
             }

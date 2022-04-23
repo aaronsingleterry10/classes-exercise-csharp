@@ -35,6 +35,10 @@ namespace ClassesExercise
             time.StartTime();
             time.StopTime();
             Console.WriteLine("Second time: " + time.Duration);
+            //var time = new DateTime();
+
+            //time.AddMilliseconds(DateTime.Now.Millisecond);
+            //Console.WriteLine(time.AddMinutes(DateTime.Now.Minute));
 
 
 
