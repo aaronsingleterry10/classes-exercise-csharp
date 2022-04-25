@@ -58,8 +58,18 @@ namespace ClassesExercise
                 procedural programming. Such programs are very fragile. Making a change breaks many parts
                 of the code.
              */
-            var post = new Post();
+            var post = new Post("ABC Issue", "ABC description of my issue");
             Console.WriteLine("Created date: " + post.GetDateCreated());
+            post.DownVote();
+            post.DownVote();
+            post.UpVote();
+            post.UpVote();
+            post.UpVote();
+            Console.WriteLine("vote status: " + post.VoteStatus);
+            Console.WriteLine("title: " + post.Title);
+            Console.WriteLine("description: " + post.Description);
+            post.Description = "ABC description update";
+            Console.WriteLine("updated description: " + post.Description);
         }
     }
 }
