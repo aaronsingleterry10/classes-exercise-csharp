@@ -66,6 +66,10 @@ namespace ClassesExercise
             post.UpVote();
             post.UpVote();
             Console.WriteLine("vote status: " + post.VoteStatus);
+            Console.WriteLine("title: " + post.Title);
+            Console.WriteLine("description: " + post.Description);
+            post.Description = "ABC description update";
+            Console.WriteLine("updated description: " + post.Description);
         }
     }
 }
