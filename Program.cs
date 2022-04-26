@@ -28,10 +28,33 @@ namespace ClassesExercise
                 outside, you should not be able to misuse a class because you shouldn’t be able to see the
                 implementation detail
              */
-            //var time = new Stopwatch();
+            var time = new Stopwatch();
+            while (true)
+            {
+                Console.Write("Enter \"Start\" to start the time, or enter any other key to stop. ");
+                var input = Console.ReadLine();
+                if (input.ToLower() == "start")
+                {
+                    time.StartTime();
+                    Console.Write("Time has started. Enter \"Stop\" to stop the time whenever you're ready. ");
+                }
+                else 
+                {
+                    break;
+                }
+                
+                var input2 = Console.ReadLine();
+                if (input2.ToLower() == "stop")
+                {
+                    time.StopTime();
+                    Console.WriteLine("First time: " + time.Duration);
+                    continue;
+                }
+            }
+
+
+
             //time.StartTime();
-            //time.StopTime();
-            //Console.WriteLine("First time: " + time.Duration);
             //time.StartTime();
             //time.StopTime();
             //Console.WriteLine("Second time: " + time.Duration);
@@ -58,18 +81,18 @@ namespace ClassesExercise
                 procedural programming. Such programs are very fragile. Making a change breaks many parts
                 of the code.
              */
-            var post = new Post("ABC Issue", "ABC description of my issue");
-            Console.WriteLine("Created date: " + post.GetDateCreated());
-            post.DownVote();
-            post.DownVote();
-            post.UpVote();
-            post.UpVote();
-            post.UpVote();
-            Console.WriteLine("vote status: " + post.VoteStatus);
-            Console.WriteLine("title: " + post.Title);
-            Console.WriteLine("description: " + post.Description);
-            post.Description = "ABC description update";
-            Console.WriteLine("updated description: " + post.Description);
+            //var post = new Post("ABC Issue", "ABC description of my issue");
+            //Console.WriteLine("Created date: " + post.GetDateCreated());
+            //post.DownVote();
+            //post.DownVote();
+            //post.UpVote();
+            //post.UpVote();
+            //post.UpVote();
+            //Console.WriteLine("vote status: " + post.VoteStatus);
+            //Console.WriteLine("title: " + post.Title);
+            //Console.WriteLine("description: " + post.Description);
+            //post.Description = "ABC description update";
+            //Console.WriteLine("updated description: " + post.Description);
         }
     }
 }
