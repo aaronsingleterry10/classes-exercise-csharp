@@ -36,12 +36,13 @@ namespace ClassesExercise
                 if (input.ToLower() == "start")
                 {
                     time.StartTime();
+                    Console.Write("Time has started. Enter \"Stop\" to stop the time whenever you're ready. ");
                 }
-                else
+                else 
                 {
                     break;
                 }
-                Console.Write("Time has started. Enter \"Stop\" to stop the time whenever you're ready. ");
+                
                 var input2 = Console.ReadLine();
                 if (input2.ToLower() == "stop")
                 {

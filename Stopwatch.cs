@@ -29,8 +29,15 @@ namespace ClassesExercise
 
         public void StopTime()
         {
-            _stopTime = DateTime.Now;
-            _hasStarted = false;
+            if (_hasStarted)
+            {
+                _stopTime = DateTime.Now;
+                _hasStarted = false;
+            }
+            else
+            {
+                throw new InvalidOperationException("stopwatch started already");
+            }
         }
 
         public TimeSpan Duration
